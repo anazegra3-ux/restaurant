@@ -1,12 +1,12 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
 #include <string>
-
+using namespace std;
 class Restaurant {
 private:
-    std::string title;
+    string title;
 public:
-    Restaurant(std::string t = "Restaurant");
+    Restaurant(string t = "Restaurant");
     ~Restaurant() {}
     void open() const;
 };

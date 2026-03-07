@@ -1,9 +1,9 @@
 #include "Dish.h"
 #include <iostream>
+using namespace std;
 
-// Використання списку ініціалізації
-Dish::Dish(std::string n, double p) : name{ n }, price{ p } {}
+Dish::Dish(string n, double p) : name{ n }, price{ p } {}
 
 void Dish::display() const {
-    std::cout << name << ": " << price << " UAH" << std::endl;
+    cout << name << ": " << price << " UAH" << endl;
 }

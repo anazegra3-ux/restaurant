@@ -1,8 +1,8 @@
 #include "Client.h"
 #include <iostream>
-
-Client::Client(std::string n) : name{ n } {}
+using namespace std;
+Client::Client(string n) : name{ n } {}
 
 void Client::show() const {
-    std::cout << "Client: " << name << std::endl;
+    cout << "Client: " << name << endl;
 }
