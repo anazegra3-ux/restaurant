@@ -1,8 +1,17 @@
-#include "Client.h"
-#include <iostream>
+#ifndef CLIENT_H
+#define CLIENT_H
+#include <string>
 using namespace std;
-Client::Client(string n) : name{ n } {}
 
-void Client::show() const {
-    cout << "Client: " << name << endl;
-}
+class Client {
+private:
+    string name;
+
+public:
+    Client();                 // без параметрів
+    Client(std::string n);    // з ім’ям
+    ~Client() {}
+
+    void show() const;
+};
+#endif

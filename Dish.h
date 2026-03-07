@@ -7,9 +7,11 @@ private:
     string name;
     double price;
 public:
-   
-    Dish(std::string n = "Dish", double p = 0.0);
-    ~Dish() {}  
+    Dish();                              // конструктор без параметрів
+    Dish(string n);                 // перевантажений конструктор
+    Dish(string n, double p);       // основний конструктор
+    ~Dish() {}
+
     void display() const;
 };
 #endif
