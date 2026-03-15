@@ -7,9 +7,9 @@ private:
     string name;
     double price;
 public:
-    Dish();                              // конструктор без параметрів
-    Dish(string n);                 // перевантажений конструктор
-    Dish(string n, double p);       // основний конструктор
+    Dish();                 
+    Dish(string n);              
+    Dish(string n, double p);       
     ~Dish() {}
 
     void display() const;

@@ -1,17 +1,11 @@
-#ifndef CLIENT_H
-#define CLIENT_H
-#include <string>
+#include "client.h"
+#include <iostream>
 using namespace std;
 
-class Client {
-private:
-    string name;
+Client::Client(string n) {
+	name = n;
+}
 
-public:
-    Client();                 // без параметрів
-    Client(std::string n);    // з ім’ям
-    ~Client() {}
-
-    void show() const;
-};
-#endif
+void Client::show() const {
+	cout << "Client: " << name << endl;
+}
