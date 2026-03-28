@@ -1,17 +1,15 @@
 #ifndef DISH_H
 #define DISH_H
+#include "MenuItem.h"
 #include <string>
 using namespace std;
-class Dish {
-private:
-    string name;
-    double price;
-public:
-    Dish();                 
-    Dish(string n);              
-    Dish(string n, double p);       
-    ~Dish() {}
 
+class Dish : public MenuItem {
+public:
+    Dish();
+    Dish(string n);
+    Dish(string n, double p);
     void display() const;
 };
+
 #endif

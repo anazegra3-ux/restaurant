@@ -11,9 +11,9 @@ int main() {
     Restaurant res("Gusto");
     res.open();
 
-    Client c1("Oksana");
-    Client c2("Andrii");
-    Client c3("Maria");
+    Client c1("Oksana", 1);
+    Client c2("Andrii", 2);
+    Client c3("Maria", 3);
 
     Dish d1("Pizza", 250);
     Dish d2("Burger", 180);
@@ -37,20 +37,17 @@ int main() {
     o1.print();
     o2.print();
     o3.print();
-    const Order o4(200);
-    o4.print();
 
-    
+    Order o6(201, c1, d1);
+    o6.print();
+
     Order::showTotal();
 
-    
     if (o1 == o3)
         cout << "Orders are equal\n";
 
-    
     cout << o1 << endl;
 
-    
     Order o5;
     cin >> o5;
     cout << o5 << endl;
