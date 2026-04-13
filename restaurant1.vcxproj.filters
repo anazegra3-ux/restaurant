@@ -36,6 +36,9 @@
     <ClCompile Include="menuitem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SecialDish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dish.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="menuitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecialDish.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

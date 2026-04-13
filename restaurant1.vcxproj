@@ -130,6 +130,7 @@
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="restaurant1.cpp" />
+    <ClCompile Include="SecialDish.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="client.h" />
@@ -138,6 +139,7 @@
     <ClInclude Include="Order.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="restaurant.h" />
+    <ClInclude Include="SpecialDish.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,10 +3,15 @@
 #include "Dish.h"
 #include "Order.h"
 #include <iostream>
+#include "SpecialDish.h"
 
 using namespace std;
+void showItem(const MenuItem& item) {
+    item.print();
+}
 
 int main() {
+    
 
     Restaurant res("Gusto");
     res.open();
@@ -14,18 +19,20 @@ int main() {
     Client c1("Oksana", 1);
     Client c2("Andrii", 2);
     Client c3("Maria", 3);
+    Client c("Oksana", 1);
 
     Dish d1("Pizza", 250);
     Dish d2("Burger", 180);
     Dish d3("Sushi", 320);
+	SpecialDish sd("Steak", 400, "Sauce");
 
     c1.show();
     c2.show();
     c3.show();
 
-    d1.display();
-    d2.display();
-    d3.display();
+    d1.print();
+    d2.print();
+    d3.print();
 
     cout << "\n--- Orders ---\n";
 
@@ -51,6 +58,13 @@ int main() {
     Order o5;
     cin >> o5;
     cout << o5 << endl;
+    MenuItem* ptr = new SpecialDish("Sushi", 300, "Sauce");
+    ptr->print();
+    delete ptr;
+
+    cout << "\n= Order =" << endl;
+    Order o(c, &sd);
+    o.print();
 
     return 0;
 }

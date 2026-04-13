@@ -8,18 +8,20 @@ using namespace std;
 class Order {
 private:
     int id;
-    Client client;   // has-a
-    Dish dish;       // has-a
+    Client client;   
+    Dish dish; 
     static int totalOrders;
+    MenuItem* item;
 
 public:
+    Order(Client c, MenuItem* i);
+
     Order(int i = 0);
     Order(int i, Client c, Dish d);
 
     Order(const Order& other);
     Order(Order&& other);
 
-    void print() const;
     static void showTotal();
 
     bool operator==(const Order& other) const;
@@ -27,6 +29,7 @@ public:
 
     friend ostream& operator<<(ostream& os, const Order& obj);
     friend istream& operator>>(istream& is, Order& obj);
+    void print() const;
 };
 
 #endif

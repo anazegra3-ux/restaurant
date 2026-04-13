@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <string>
 using namespace std;
 
@@ -8,5 +8,15 @@ protected:
     double price;
 
 public:
-    MenuItem(string n, double p); // ? ����� ����������
+    MenuItem(string n, double p);
+
+    // 🔥 ВІРТУАЛЬНІ ФУНКЦІЇ
+    virtual void print() const=0 {
+    }
+
+    virtual double getPrice() const {
+        return price;
+    }
+    // 🔥 ВІРТУАЛЬНИЙ ДЕСТРУКТОР
+    virtual ~MenuItem() {}
 };

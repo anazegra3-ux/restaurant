@@ -1,4 +1,4 @@
-#include "Order.h"
+﻿#include "Order.h"
 int Order::totalOrders = 0;
 
 Order::Order(int i) : id{ i } {
@@ -23,7 +23,8 @@ Order::Order(Order&& other)
 void Order::print() const {
     cout << "Order #" << id << endl;
     client.show();
-    dish.display();
+    item->print();
+
 }
 
 void Order::showTotal() {
@@ -47,4 +48,15 @@ istream& operator>>(istream& is, Order& obj) {
     cout << "Enter order id: ";
     is >> obj.id;
     return is;
+}
+Order::Order(Client c, MenuItem* i)
+    : client(c), item(i) {
+}
+	
+
+void Order::print() const {
+    client.show();
+
+    // 🔥 dynamic polymorphism
+    item->print();
 }

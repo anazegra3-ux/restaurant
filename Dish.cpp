@@ -8,6 +8,6 @@ Dish::Dish(string n) : MenuItem(n, 0.0) {}
 
 Dish::Dish(string n, double p) : MenuItem(n, p) {}
 
-void Dish::display() const {
-    cout << name << ": " << price << " UAH" << endl;
+void Dish::print() const {
+    cout << "Dish: " << name << " " << price << " UAH" << endl;
 }
